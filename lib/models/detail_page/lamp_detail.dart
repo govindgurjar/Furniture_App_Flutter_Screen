@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furniture_app/colors/colors.dart';
 
-class SofaDetails extends StatefulWidget {
-  const SofaDetails({super.key});
+class LampDetailPage extends StatefulWidget {
+  const LampDetailPage({super.key});
 
   @override
-  State<SofaDetails> createState() => _SofaDetailsState();
+  State<LampDetailPage> createState() => _LampDetailPageState();
 }
 
-class _SofaDetailsState extends State<SofaDetails> {
+class _LampDetailPageState extends State<LampDetailPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,8 +26,11 @@ class _SofaDetailsState extends State<SofaDetails> {
               ],
             ),
             Hero(
-              tag: 'Sofa',
-              child: Image.asset('images/sofa1.png'),
+              tag: 'Lamp',
+              child: Image.asset(
+                'images/lamp2.png',
+                height: 410,
+              ),
             ),
             const SizedBox(height: 15),
             Padding(
@@ -36,7 +39,7 @@ class _SofaDetailsState extends State<SofaDetails> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Room Sofa',
+                    'Table Lamp',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 32),
                   ),
                   Container(
@@ -99,14 +102,14 @@ class _SofaDetailsState extends State<SofaDetails> {
                 ),
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             Padding(
               padding: const EdgeInsets.all(18.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    '₹2500',
+                    '₹550',
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
                   ),
                   Container(

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:furniture_app/colors/colors.dart';
 
-class SofaDetails extends StatefulWidget {
-  const SofaDetails({super.key});
+import '../../colors/colors.dart';
+
+class WoodTableDetail extends StatefulWidget {
+  const WoodTableDetail({super.key});
 
   @override
-  State<SofaDetails> createState() => _SofaDetailsState();
+  State<WoodTableDetail> createState() => _WoodTableDetailState();
 }
 
-class _SofaDetailsState extends State<SofaDetails> {
+class _WoodTableDetailState extends State<WoodTableDetail> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,8 +27,11 @@ class _SofaDetailsState extends State<SofaDetails> {
               ],
             ),
             Hero(
-              tag: 'Sofa',
-              child: Image.asset('images/sofa1.png'),
+              tag: 'Table',
+              child: Image.asset(
+                'images/table2.png',
+                height: 300,
+              ),
             ),
             const SizedBox(height: 15),
             Padding(
@@ -36,7 +40,7 @@ class _SofaDetailsState extends State<SofaDetails> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Room Sofa',
+                    'Wood Table',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 32),
                   ),
                   Container(
@@ -106,7 +110,7 @@ class _SofaDetailsState extends State<SofaDetails> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    '₹2500',
+                    '₹905',
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
                   ),
                   Container(

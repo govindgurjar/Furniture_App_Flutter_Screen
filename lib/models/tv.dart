@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/colors/colors.dart';
+import 'package:furniture_app/models/detail_page/tv_detail.dart';
 
 class TvModel extends StatelessWidget {
   const TvModel({super.key});
@@ -23,7 +24,7 @@ class TvModel extends StatelessWidget {
                   children: [
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.favorite_border_outlined))
+                        icon: const Icon(Icons.favorite_border_outlined))
                   ],
                 ),
               ],
@@ -31,11 +32,20 @@ class TvModel extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 20,
-          left: 35,
-          child: Image(image: AssetImage('images/product2.png')),
-        ),
-        Positioned(
+            top: 20,
+            left: 35,
+            child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TvDetailPage(),
+                      ));
+                },
+                child: const Hero(
+                    tag: 'TV',
+                    child: Image(image: AssetImage('images/product2.png'))))),
+        const Positioned(
           top: 150,
           left: 30,
           child: Text(
@@ -43,7 +53,7 @@ class TvModel extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 170,
           left: 30,
           child: Row(
@@ -70,16 +80,17 @@ class TvModel extends StatelessWidget {
           left: 30,
           child: Row(
             children: [
-              Text(
+              const Text(
                 "₹35250",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(width: 70),
+              const SizedBox(width: 70),
               CircleAvatar(
                 backgroundColor: MyColors.theme,
                 radius: 19,
                 child: Center(
-                    child: IconButton(onPressed: () {}, icon: Icon(Icons.add))),
+                    child: IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.add))),
               )
             ],
           ),

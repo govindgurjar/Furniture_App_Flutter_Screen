@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/colors/colors.dart';
+import 'package:furniture_app/models/detail_page/table_detail.dart';
 
 class WoodTavleModel extends StatelessWidget {
   const WoodTavleModel({super.key});
@@ -23,7 +24,7 @@ class WoodTavleModel extends StatelessWidget {
                   children: [
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.favorite_border_outlined))
+                        icon: const Icon(Icons.favorite_border_outlined))
                   ],
                 ),
               ],
@@ -31,11 +32,20 @@ class WoodTavleModel extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 0,
-          left: 10,
-          child: Image(image: AssetImage('images/product4.png')),
-        ),
-        Positioned(
+            top: 20,
+            left: 35,
+            child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WoodTableDetail(),
+                      ));
+                },
+                child: const Hero(
+                    tag: 'Table',
+                    child: Image(image: AssetImage('images/product4.png'))))),
+        const Positioned(
           top: 150,
           left: 30,
           child: Text(
@@ -43,7 +53,7 @@ class WoodTavleModel extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 170,
           left: 30,
           child: Row(
@@ -70,16 +80,17 @@ class WoodTavleModel extends StatelessWidget {
           left: 30,
           child: Row(
             children: [
-              Text(
-                "₹2500",
+              const Text(
+                "₹905",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(width: 70),
+              const SizedBox(width: 70),
               CircleAvatar(
                 backgroundColor: MyColors.theme,
                 radius: 19,
                 child: Center(
-                    child: IconButton(onPressed: () {}, icon: Icon(Icons.add))),
+                    child: IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.add))),
               )
             ],
           ),

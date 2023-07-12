@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:furniture_app/colors/colors.dart';
 
-class SofaDetails extends StatefulWidget {
-  const SofaDetails({super.key});
+class TvDetailPage extends StatefulWidget {
+  const TvDetailPage({super.key});
 
   @override
-  State<SofaDetails> createState() => _SofaDetailsState();
+  State<TvDetailPage> createState() => _TvDetailPageState();
 }
 
-class _SofaDetailsState extends State<SofaDetails> {
+class _TvDetailPageState extends State<TvDetailPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,8 +26,10 @@ class _SofaDetailsState extends State<SofaDetails> {
               ],
             ),
             Hero(
-              tag: 'Sofa',
-              child: Image.asset('images/sofa1.png'),
+              tag: 'TV',
+              child: Image.asset(
+                'images/tv2.png',
+              ),
             ),
             const SizedBox(height: 15),
             Padding(
@@ -36,7 +38,7 @@ class _SofaDetailsState extends State<SofaDetails> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Room Sofa',
+                    'Toshiba Tv',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 32),
                   ),
                   Container(
@@ -106,7 +108,7 @@ class _SofaDetailsState extends State<SofaDetails> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    '₹2500',
+                    '₹35250',
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
                   ),
                   Container(

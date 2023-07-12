@@ -29,7 +29,7 @@ class _SofaModelState extends State<SofaModel> {
                   children: [
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.favorite_border_outlined))
+                        icon: const Icon(Icons.favorite_border_outlined))
                   ],
                 ),
               ],
@@ -37,21 +37,20 @@ class _SofaModelState extends State<SofaModel> {
           ),
         ),
         Positioned(
-          top: 20,
-          left: 35,
-          child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SofaDetails(),
-                    ));
-              },
-              child: Hero(
-                  tag: 'Sofa',
-                  child: Image(image: AssetImage('images/product1.png')))),
-        ),
-        Positioned(
+            top: 20,
+            left: 35,
+            child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SofaDetails(),
+                      ));
+                },
+                child: const Hero(
+                    tag: 'Sofa',
+                    child: Image(image: AssetImage('images/product1.png'))))),
+        const Positioned(
           top: 150,
           left: 30,
           child: Text(
@@ -59,7 +58,7 @@ class _SofaModelState extends State<SofaModel> {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        Positioned(
+        const Positioned(
           top: 170,
           left: 30,
           child: Row(
@@ -86,16 +85,17 @@ class _SofaModelState extends State<SofaModel> {
           left: 30,
           child: Row(
             children: [
-              Text(
+              const Text(
                 "₹2500",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(width: 70),
+              const SizedBox(width: 70),
               CircleAvatar(
                 backgroundColor: MyColors.theme,
                 radius: 19,
                 child: Center(
-                    child: IconButton(onPressed: () {}, icon: Icon(Icons.add))),
+                    child: IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.add))),
               )
             ],
           ),
