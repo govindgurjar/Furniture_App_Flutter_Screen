@@ -31,8 +31,8 @@ class WoodTavleModel extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 20,
-          left: 35,
+          top: 0,
+          left: 10,
           child: Image(image: AssetImage('images/product4.png')),
         ),
         Positioned(

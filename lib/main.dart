@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/intro_page.dart';
+import 'package:furniture_app/models/detail_page/sofa_detail.dart';
 
 void main() {
   runApp(const MyApp());

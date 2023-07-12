@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/colors/colors.dart';
+import 'package:furniture_app/models/detail_page/sofa_detail.dart';
 
 class SofaModel extends StatefulWidget {
   const SofaModel({super.key});
@@ -38,7 +39,17 @@ class _SofaModelState extends State<SofaModel> {
         Positioned(
           top: 20,
           left: 35,
-          child: Image(image: AssetImage('images/product1.png')),
+          child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SofaDetails(),
+                    ));
+              },
+              child: Hero(
+                  tag: 'Sofa',
+                  child: Image(image: AssetImage('images/product1.png')))),
         ),
         Positioned(
           top: 150,

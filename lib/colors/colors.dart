@@ -6,4 +6,5 @@ class MyColors {
   static const Color container = Color(0xFFFFFFFF);
   static const Color background = Color(0xFFFCFCFC);
   static const Color color2 = Color(0xFFC9A885);
+  static const Color black = Colors.black;
 }

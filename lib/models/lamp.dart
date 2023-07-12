@@ -31,8 +31,8 @@ class LampModle extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 20,
-          left: 35,
+          top: 0,
+          left: 40,
           child: Image(image: AssetImage('images/product3.png')),
         ),
         Positioned(
