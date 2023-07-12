@@ -2,8 +2,7 @@
 
 ## Getting Started
 
-![Farniture](https://github.com/govindgurjar/Furniture_App_Flutter_Screen/assets/83970520/3cc89029-b108-4227-976c-a2c173f6c48a)
-
+<img src="https://github.com/govindgurjar/Furniture_App_Flutter_Screen/assets/83970520/3cc89029-b108-4227-976c-a2c173f6c48a" alt="drawing" width="300"/>
 
 
 
